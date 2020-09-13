@@ -1,13 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using PrimeNumberApp.BLL.Interfaces.Managers;
 
 namespace PrimeNumberApp.BLL.Managers
 {
     /// <summary>
     /// Manager class for prime number calculations
     /// </summary>
-    public class PrimeNumberMgr
+    public class PrimeNumberMgr : IPrimeNumberMgr
     {
         /// <summary>
         /// Check number is prime or not
@@ -42,7 +43,7 @@ namespace PrimeNumberApp.BLL.Managers
             var primeNumber = number;
             var isFound = false;
 
-            // Lopp till found the smallest prime
+            // Loop till found the smallest prime
             while (!isFound)
             {
                 primeNumber++;
