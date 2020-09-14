@@ -15,12 +15,6 @@ namespace PrimeNumberApp.API.Controllers
             _primeNumberMgr = primeNumberMgr;
         }
 
-        [HttpGet]
-        public ActionResult<bool> Index()
-        {
-            return Ok();
-        }
-
         [Route("isPrime/{number}")]
         [HttpGet]
         public ActionResult<bool> IsPrime(int number)
