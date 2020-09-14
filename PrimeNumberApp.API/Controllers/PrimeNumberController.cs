@@ -8,25 +8,25 @@ namespace PrimeNumberApp.API.Controllers
     [ApiController]
     public class PrimeNumberController : ControllerBase
     {
-        private readonly IPrimeNumberManager _primeNumberMgr;
+        private readonly IPrimeNumberManager _primeNumberManager;
 
-        public PrimeNumberController(IPrimeNumberManager primeNumberMgr)
+        public PrimeNumberController(IPrimeNumberManager primeNumberManager)
         {
-            _primeNumberMgr = primeNumberMgr;
+            _primeNumberManager = primeNumberManager;
         }
 
         [Route("isPrime/{number}")]
         [HttpGet]
         public ActionResult<bool> IsPrime(int number)
         { 
-            return Ok(_primeNumberMgr.IsPrime(number));
+            return Ok(_primeNumberManager.IsPrime(number));
         }
 
         [Route("nextPrime/{number}")]
         [HttpGet]
         public ActionResult<int> NextPrime(int number)
         {
-            return Ok(_primeNumberMgr.NextPrimeAfterGivenNumber(number));
+            return Ok(_primeNumberManager.NextPrimeAfterGivenNumber(number));
         }
     }
 }
