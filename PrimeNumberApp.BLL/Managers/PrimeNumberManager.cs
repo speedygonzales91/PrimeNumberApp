@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 using PrimeNumberApp.BLL.Interfaces.Managers;
 
 namespace PrimeNumberApp.BLL.Managers
@@ -8,7 +6,7 @@ namespace PrimeNumberApp.BLL.Managers
     /// <summary>
     /// Manager class for prime number calculations
     /// </summary>
-    public class PrimeNumberMgr : IPrimeNumberMgr
+    public class PrimeNumberManager : IPrimeNumberManager
     {
         /// <summary>
         /// Check number is prime or not
@@ -17,15 +15,14 @@ namespace PrimeNumberApp.BLL.Managers
         /// <returns></returns>
         public bool IsPrime(int number)
         {
-            // Base case 
-            if (number <= 1)
-                return false;
-
-            // Check from 2 to number-1 
-            for (var i = 2; i < number; i++)
+            int sqrt = (int)Math.Sqrt(number) + 1;
+            for (int i = 2; i < sqrt; i++)
+            {
                 if (number % i == 0)
+                {
                     return false;
-
+                }
+            }
             return true;
         }
 

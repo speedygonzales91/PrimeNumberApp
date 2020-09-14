@@ -8,9 +8,9 @@ namespace PrimeNumberApp.API.Controllers
     [ApiController]
     public class PrimeNumberController : ControllerBase
     {
-        private readonly IPrimeNumberMgr _primeNumberMgr;
+        private readonly IPrimeNumberManager _primeNumberMgr;
 
-        public PrimeNumberController(IPrimeNumberMgr primeNumberMgr)
+        public PrimeNumberController(IPrimeNumberManager primeNumberMgr)
         {
             _primeNumberMgr = primeNumberMgr;
         }

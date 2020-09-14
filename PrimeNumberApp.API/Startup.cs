@@ -30,7 +30,7 @@ namespace PrimeNumberApp.API
             services.AddControllers();
 
             #region Managers registration
-            services.AddScoped<IPrimeNumberMgr, PrimeNumberMgr>();
+            services.AddScoped<IPrimeNumberManager, PrimeNumberManager>();
             #endregion
 
             // Register the Swagger generator, defining 1 or more Swagger documents
