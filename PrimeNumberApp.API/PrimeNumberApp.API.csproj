@@ -4,6 +4,10 @@
     <ProjectReference Include="..\PrimeNumberApp.BLL\PrimeNumberApp.BLL.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="5.5.0" />
+  </ItemGroup>
+
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
