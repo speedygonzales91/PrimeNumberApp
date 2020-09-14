@@ -36,14 +36,14 @@ namespace PrimeNumberApp.BLL.Managers
             // Base case
             if (number <= 1)
                 return 2;
-
-            var primeNumber = number;
+                
+            var primeNumber = number % 2 == 0 ? number - 1 : number;
             var isFound = false;
 
             // Loop till found the smallest prime
             while (!isFound)
             {
-                primeNumber++;
+                primeNumber += 2;
 
                 if (IsPrime(primeNumber))
                     isFound = true;
