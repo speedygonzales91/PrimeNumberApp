@@ -9,12 +9,15 @@ namespace PrimeNumberApp.BLL.Managers
     public class PrimeNumberManager : IPrimeNumberManager
     {
         /// <summary>
-        /// Check number is prime or not
+        /// Checks whether the number is prime or not
         /// </summary>
         /// <param name="number">number to check</param>
         /// <returns></returns>
         public bool IsPrime(int number)
         {
+            if (number < 2)
+                return false;
+
             int sqrt = (int)Math.Sqrt(number) + 1;
             for (int i = 2; i < sqrt; i++)
             {
